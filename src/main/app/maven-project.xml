@@ -25,7 +25,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd">
 
   <!-- base config for http entry point -->
-  <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8181" doc:name="HTTP Listener Configuration"/>
+  <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="${http.port}" doc:name="HTTP Listener Configuration"/>
 
   <!-- connection to derby in-memory database -->
   <db:derby-config name="Derby_Configuration" url="jdbc:derby:memory:muleEmbeddedDB;create=true" doc:name="Derby Configuration"/>
